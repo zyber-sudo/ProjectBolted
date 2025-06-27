@@ -1,0 +1,43 @@
+<div class="track-list-container">
+  <header class="header">
+    <h1>{{ title }}</h1>
+    <p class="subtitle">{{ description }}</p>
+  </header>
+
+  <div class="container track-container">
+    <div class="track-list">
+      <div
+        *ngFor="let track of tracks"
+        class="track-item"
+      >
+        <h3>{{track.name}}</h3>
+        <p>{{track.location}}</p>
+      </div>
+    </div>
+    <div class="map-container" *ngIf="selectedTrack">
+      <div class="track-details">
+        <div class="map-controls">
+        </div>
+        <div class="map-wrapper" cdkDrag cdkDragBoundary=".map-wrapper">
+
+            <img
+              #trackImage
+            >
+
+              <div class="point-marker"></div>
+              <div class="point-tooltip">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="track-info">
+        </div>
+      </div>
+    </div>
+
+
+  <section class="cta-section">
+    <h2>Ready to get started?</h2>
+    <button class="cta-button">Get Started</button>
+  </section>
+
