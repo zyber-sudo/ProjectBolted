@@ -1,0 +1,24 @@
+.feature-card {
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  min-height: 200px;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  position: relative;
+  flex: 1;
+  margin: 10px;
+}
+
+/* Optional dark overlay for better contrast */
+.feature-card .overlay {
+  background-color: rgba(0, 0, 0, 0.45);
+  padding: 1rem;
+  width: 100%;
+  border-radius: 0 0 12px 12px;
+}
