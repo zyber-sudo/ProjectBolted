@@ -1,0 +1,33 @@
+
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate id="contact-form">
+  <div>
+    <label for="name">Name</label>
+    <input id="name" formControlName="name" type="text" />
+    <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+      Name is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="email">Email</label>
+    <input id="email" formControlName="email" type="email" />
+    <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+      Enter a valid email.
+    </div>
+  </div>
+
+  <div>
+    <label for="subject">Subject</label>
+    <input id="subject" formControlName="subject" type="text" />
+  </div>
+
+  <div>
+    <label for="message">Message</label>
+    <textarea id="message" formControlName="message" rows="5"></textarea>
+    <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
+      Message is required.
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="contactForm.invalid">Send</button>
+</form>

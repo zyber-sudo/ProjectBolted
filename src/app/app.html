@@ -1,10 +1,10 @@
 <div class="app-container">
   <header class="app-header">
-    <div class="logo">Lorem Ipsum</div>
+    <div class="logo">Interactive Racing Maps</div>
     <nav class="nav-menu">
       <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
-      <a routerLink="/about" routerLinkActive="active">About</a>
-      <a routerLink="/services" routerLinkActive="active">Services</a>
+      <a routerLink="/tracks" routerLinkActive="active">Track List</a>
+      <a routerLink="/coming-soon" routerLinkActive="active">Coming Soon</a>
       <a routerLink="/contact" routerLinkActive="active">Contact</a>
     </nav>
   </header>
@@ -14,74 +14,9 @@
   </main>
 
   <footer class="app-footer">
-    <p>Made with ❤️ by Zachary Zamiska. Open Source under the MIT License. Contributions welcome.</p>
-  </footer>
+      <p>
+        Made with ❤️ by Zachary Zamiska. Open Source under the
+        <a href="https://github.com/zyber-sudo/ProjectBolted/blob/master/LICENSE.md" target="_blank" rel="noopener noreferrer">MIT License</a> — ProjectBolted. Contributions welcome..
+      </p>
+    </footer>
 </div>
-
-<style>
-  .app-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    font-family: 'Arial', sans-serif;
-  }
-
-  .app-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #FF1801;
-    color: white;
-  }
-
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-
-  .nav-menu a {
-    color: white;
-    text-decoration: none;
-    margin-left: 1rem;
-    padding: 0.5rem;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-  }
-
-  .nav-menu a:hover, .nav-menu a.active {
-    background-color: #555;
-  }
-
-  .main-content {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', sans-serif;
-    color: #f0f0f0;
-    background: linear-gradient(135deg, #0f0f0f, #1a1a1a, #2a2a2a) fixed;
-  }
-
-  .app-footer {
-    background-color: #FF1801;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: auto;
-  }
-
-  @media (max-width: 768px) {
-    .app-header {
-      flex-direction: column;
-      padding: 1rem;
-    }
-
-    .nav-menu {
-      margin-top: 1rem;
-    }
-
-    .nav-menu a {
-      margin: 0 0.5rem;
-    }
-  }
-</style>

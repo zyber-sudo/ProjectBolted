@@ -1,0 +1,34 @@
+input, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+label {
+  font-weight: 600;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  background-color: #e10600; /* F1 red */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #aaa;
+}
+
+contact-form {
+  height: 10%;
+  margin: 0;
+  padding: 50px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #f0f0f0;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a, #2a2a2a) fixed;
+}
