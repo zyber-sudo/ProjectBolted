@@ -1,0 +1,51 @@
+.track-details-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: white;
+}
+
+.back-button {
+  cursor: pointer;
+  color: #ff1801;
+  margin-bottom: 2rem;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.back-button:hover {
+  text-decoration: underline;
+}
+
+.track-header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.track-header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #ff1801;
+}
+
+.track-header p {
+  font-size: 1.5rem;
+  opacity: 0.8;
+}
+
+.track-map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 4rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.track-map {
+  max-width: 100%;
+  max-height: 60vh;
+  height: auto;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+}

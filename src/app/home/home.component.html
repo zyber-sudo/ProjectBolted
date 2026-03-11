@@ -16,6 +16,7 @@
         *ngFor="let feature of features"
         [ngStyle]="{'background-image': 'url(' + feature.image + ')'}"
         class="feature-card"
+        [routerLink]="feature.link"
       >
         <div class="overlay">
           <h3>{{ feature.title }}</h3>

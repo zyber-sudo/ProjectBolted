@@ -1,1 +1,12 @@
-<p>track-list.component works!</p>
+<div class="track-list-container">
+  <h1>Formula 1 Tracks</h1>
+  <div class="track-grid">
+    <div *ngFor="let track of tracks" class="track-card" [routerLink]="['/track', track.id]">
+      <img [src]="track.image" [alt]="track.name" class="track-image">
+      <div class="track-info">
+        <h3>{{ track.name }}</h3>
+        <p>{{ track.location }}</p>
+      </div>
+    </div>
+  </div>
+</div>

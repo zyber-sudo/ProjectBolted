@@ -3,12 +3,14 @@ import { HomeComponent } from './home/home.component';
 import {ContactComponent} from './contact/contact.component';
 import {TrackListComponent} from './track-list/track-list.component';
 import {ComingSoonComponent} from './coming-soon/coming-soon.component';
+import {TrackDetails} from './track-details/track-details';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   // These routes are placeholders - you'll need to create these components
   { path: 'tracks', component: TrackListComponent },
+  { path: 'track/:id', component: TrackDetails },
   { path: 'coming-soon', component: ComingSoonComponent },
   { path: 'contact', component: ContactComponent },
   { path: '**', redirectTo: '' }

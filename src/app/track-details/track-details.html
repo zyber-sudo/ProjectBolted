@@ -1,0 +1,19 @@
+<div class="track-details-container" *ngIf="track">
+  <div class="back-button" [routerLink]="['/tracks']">
+    &larr; Back to Tracks
+  </div>
+  <div class="track-header">
+    <h1>{{ track.name }}</h1>
+    <p>{{ track.location }}</p>
+  </div>
+  <div class="track-map-container">
+    <img [src]="track.image" [alt]="track.name + ' track map'" class="track-map">
+  </div>
+</div>
+
+<div class="track-details-container" *ngIf="!track">
+  <h1>Track not found</h1>
+  <div class="back-button" [routerLink]="['/tracks']">
+    &larr; Back to Tracks
+  </div>
+</div>
