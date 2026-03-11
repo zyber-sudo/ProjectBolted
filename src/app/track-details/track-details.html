@@ -6,8 +6,41 @@
     <h1>{{ track.name }}</h1>
     <p>{{ track.location }}</p>
   </div>
-  <div class="track-map-container">
-    <img [src]="track.image" [alt]="track.name + ' track map'" class="track-map">
+  <div class="track-map-container"
+       (wheel)="onWheel($event)"
+       (mousedown)="onMouseDown($event)"
+       (mousemove)="onMouseMove($event)"
+       (mouseup)="onMouseUp()"
+       (mouseleave)="onMouseUp()"
+       (click)="onMapClick($event)"
+       [class.poi-mode]="isAddingPoi">
+    <img [src]="track.image"
+         [alt]="track.name + ' track map'"
+         class="track-map"
+         [style.transform]="'scale(' + scale + ') translate(' + positionX/scale + 'px, ' + positionY/scale + 'px)'"
+         [class.grabbing]="isDragging">
+
+    <div class="poi-pins" [style.transform]="'scale(' + scale + ') translate(' + positionX/scale + 'px, ' + positionY/scale + 'px)'">
+      <div *ngFor="let poi of pois" class="poi-pin" [style.left.px]="poi.x" [style.top.px]="poi.y">
+        <div class="pin-marker"></div>
+        <div class="pin-label">
+          <span class="poi-sport">[{{ poi.sport }}]</span>
+          {{ poi.label }}
+        </div>
+      </div>
+    </div>
+
+    <div class="poi-controls">
+      <button (click)="toggleAddPoi()" [class.active]="isAddingPoi">
+        {{ isAddingPoi ? 'Cancel POI' : 'Add POI' }}
+      </button>
+    </div>
+
+    <div class="zoom-controls">
+      <button (click)="zoomIn()" title="Zoom In">+</button>
+      <button (click)="zoomOut()" title="Zoom Out">-</button>
+      <button (click)="resetZoom()" title="Reset Zoom">⟳</button>
+    </div>
   </div>
 </div>
 
